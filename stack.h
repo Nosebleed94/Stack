@@ -27,6 +27,7 @@ struct stack_t
     Stack_Elem_t* storage;
     long long size;
     size_t capacity;
+    uint64_t hashsum;
 };
 
 enum stack_error StackCtor (struct stack_t* stk, size_t size_capacity);
@@ -38,6 +39,6 @@ enum stack_error StackAssert (struct stack_t* stk, enum stack_error error, long 
 enum stack_error StackEmpty (struct stack_t* stk, long line);
 enum stack_error StackProverkaPetuxov (struct stack_t* stk, long line, const char* func, const char* file);
 uint64_t HashFunc (char* buffer, size_t size);
-enum stack_error CheckHash (char* buffer, enum stack_error error, uint64_t sum, long line, size_t size, struct stack_t* stk);
+enum stack_error CheckHash (char* buffer, enum stack_error error, long line, size_t size, struct stack_t* stk);
 
 #endif // FUNCTION_

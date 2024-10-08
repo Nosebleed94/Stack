@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include <malloc.h>
 
 #include "stack.h"
 
@@ -15,14 +16,13 @@ int main ()
     StackPush (&stk, 200);
     StackPush (&stk, 300);
     StackPush (&stk, 400);
-   
+
     Stack_Elem_t pickupelem = 0;
 
     StackPop (&stk, &pickupelem);
     StackPop (&stk, &pickupelem);
     StackPop (&stk, &pickupelem);
     StackPop (&stk, &pickupelem);
-
+    
     return 0;
 }
-
